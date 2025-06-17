@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Animasi warna-warni untuk teks */
+        @keyframes rainbowText {
+            0% { color: #ff0000; }
+            25% { color: #00ff00; }
+            50% { color: #0000ff; }
+            75% { color: #ffff00; }
+            100% { color: #ff00ff; }
+        }
+
+        /* Animasi gerak ke atas ke bawah dan mengecil membesar */
+        @keyframes bounceText {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-10px) scale(1.2);
+            }
+        }
+
+        /* Animasi gerak ke atas dan ke bawah */
+        @keyframes verticalBounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Animasi hilang ke timbul */
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #333;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            animation: verticalBounce 2s infinite;
+            margin: 0;
+            padding-left: 2rem; /* Geser teks sedikit ke kanan */
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        section {
+            padding: 2rem;
+            display: none; /* Semua section disembunyikan secara default */
+        }
+        section.active {
+            display: block; /* Section yang aktif akan ditampilkan */
+        }
+        .summary {
+            margin-bottom: 2rem;
+        }
+        .photo-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            text-align: center;
+            line-height: 200px;
+            color: #333;
+            margin-top: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h2, h3 {
+            animation: fadeInOut 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nabiel Portfolio</h1>
+        <nav>
+            <a onclick="showSection('home')">Home</a>
+            <a onclick="showSection('projects')">My Projects</a>
+            <a onclick="showSection('commission')">Commission</a>
+            <a onclick="showSection('about')">About Me</a>
+        </nav>
+    </header>
+    <section id="home" class="active">
+        <h2 style="font-family: 'Poppins', sans-serif; text-align: center; font-size: 2.5rem; color: #333; animation: fadeInOut 3s infinite;">Welcome to My Creative Space</h2>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; text-align: left; margin-top: 1rem;">
+            Hi, and thank you for visiting my portfolio website. I’m a visual designer and multimedia content creator passionate about telling stories through design, illustration, photography, and video. This platform is where I share a collection of my creative work, the services I offer, and a bit about myself — all in one place. Whether you're here to explore, collaborate, or commission a project, I hope you enjoy your visit.
+        </p>
+
+        <!-- My Projects -->
+        <div style="margin-top: 2rem; animation: fadeIn 2s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; text-align: left;">My Projects</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; text-align: left; margin-top: 0.5rem;">
+                Take a glimpse into my creative world — from bold digital designs and unique illustrations to thoughtful photography and dynamic videography. Each project reflects my dedication to visual storytelling and aesthetic clarity.
+                Click the section to see more works, background stories, and clients I’ve collaborated with.
+            </p>
+            <div style="width: 100%; height: 300px; background-color: #ddd; text-align: center; line-height: 300px; color: #333; margin-top: 1rem; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center;">
+                <img src="https://i.imgur.com/Ovf6Ve0.png" alt="My Projects Showcase" style="max-width: 100%; max-height: 100%; border-radius: 8px;">
+            </div>
+        </div>
+
+        <!-- Commission -->
+        <div style="margin-top: 2rem; animation: fadeIn 2.5s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; text-align: left;">Commission</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; text-align: left; margin-top: 0.5rem;">
+                I offer creative services in graphic design, illustration, photography, and videography. Whether it’s a logo for your brand, an original character illustration, product documentation, or a promotional video — I’m open to working on custom ideas that match your vision.
+                You can view detailed pricing and terms in the Commission section.
+            </p>
+            <div style="width: 100%; height: 300px; background-color: #ddd; text-align: center; line-height: 300px; color: #333; margin-top: 1rem; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center;">
+                <img src="https://i.imgur.com/SmaJ2Oj.png" alt="Commission Showcase" style="max-width: 100%; max-height: 100%; border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 style="font-family: 'Poppins', sans-serif; text-align: center; font-size: 2.5rem; color: #333; animation: fadeIn 1s ease-in-out;">My Projects</h2>
+
+        <!-- Digital Design -->
+        <div style="margin-top: 2rem; animation: fadeIn 1.5s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">Digital Design</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">My design projects include various creative works such as logos, posters, and other graphic designs.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/kg80VFU.png"
+                             alt="Digital Design Example"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Logo Design Event<br>Client: KAK BEM KM<br>Year: 2024
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 100px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/ktqXSsV.jpeg"
+                             alt="Poster Design Example"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Design interaktif<br>Client: campus assignment<br>Year: 2024
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/F82hLRx.png"
+                             alt="Branding Example"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Poster Energi Bersih<br>Client: campus assignment.<br>Year: 2024
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/QZwz2Tu.jpeg"
+                             alt="Logo Design Example"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Psoter fot Instastory<br>Client: KAK BEM KM<br>Year: 2024
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/fJ9tGtc.jpeg"
+                             alt="Poster Design Example"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Poster new Product<br>Client: campus assignment<br>Year: 2023
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/sx6MWIc.jpeg"
+                             alt="Branding Example"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Psoter Pendidikan Anak<br>Client: campus assignment<br>Year: 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photography / videography -->
+        <div style="margin-top: 2rem; animation: fadeIn 2s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">Photography / videography</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">I create illustrations with a unique and creative style, suitable for various visual needs and communication goals.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/vONz111.jpeg"
+                             alt="Functional Design Example 1"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Red Flower<br>Client: - <br>Year: 2022
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 100px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/dLDr116.jpeg"
+                             alt="Functional Design Example 2"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Candle <br>Client: -<br>Year: 2022
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/3Fdd0cc.jpeg"
+                             alt="Functional Design Example 3"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Trio man <br>Client: Friends<br>Year: 2022
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Illustration -->
+        <div style="margin-top: 2rem; animation: fadeIn 2.5s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">Illustration</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">My illustrations are made in my personal, distinctive style—ideal for storytelling, visual content, and custom projects.</p>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/foUCoD0.png"
+                             alt="Illustration Example 1"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Mascot Design Corndog street<br>Client: corndog street<br>Year: 2023
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 150px; height: 100px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/htsi8ps.png"
+                             alt="Illustration Example 2"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Hydro coco mascot <br>Client: campus assignment<br>Year: 2024
+                    </p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 150px; margin: 0 auto; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+                        <img src="https://i.imgur.com/hInWk92.jpeg"
+                             alt="Illustration Example 3"
+                             style="max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px;">
+                    </div>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 1rem; color: #555; margin-top: 0.5rem;">
+                        Project Title: Quackster mascot swimming event<br>Client: campus assignment<br>Year: 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="commission">
+        <h2 style="font-family: 'Poppins', sans-serif; text-align: center; font-size: 2.5rem; color: #333; animation: fadeIn 1s ease-in-out;">Commission</h2>
+        
+        <!-- Design Project -->
+        <div style="margin-top: 2rem; animation: fadeIn 1.5s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">Design Project</h3>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                <img src="https://i.imgur.com/NXmh5Y5.png" alt="Design Example 1" style="width: 200px; height: 300px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://i.imgur.com/QZwz2Tu.jpeg" alt="Design Example 2" style="width: 200px; height: 300px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://i.imgur.com/F82hLRx.png" alt="Design Example 3" style="width: 200px; height: 300px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            </div>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 1rem;">
+                My projects typically include logo creation, poster design, and visual branding. Depending on the complexity and scope of the project, the pricing ranges from IDR 200,000 to IDR 2,000,000. For international clients, the starting price is around $50 per project. Each project is tailored to meet the specific needs of the client, with a focus on delivering clear, impactful, and visually consistent results. If you're interested, feel free to contact me directly.
+            </p>
+        </div>
+
+        <!-- Illustration Project -->
+        <div style="margin-top: 2rem; animation: fadeIn 2s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">Illustration Project</h3>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                <img src="https://i.imgur.com/iYZFcMl.jpeg" alt="Illustration Example 1" style="width: 300px; height: 200px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://i.imgur.com/hInWk92.jpeg" alt="Illustration Example 2" style="width: 300px; height: 200px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://i.imgur.com/vLqT5AK.png" alt="Illustration Example 3" style="width: 300px; height: 200px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            </div>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 1rem;">
+                My illustration work is created in my own unique and creative art style, and I only accept commissions that follow this personal style. Pricing starts from $150 per project for full commissions. For individual elements, the rates are as follows:
+            </p>
+            <ul style="list-style-type: square; padding-left: 1.5rem; font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">
+                <li>Background illustration starts from IDR 50,000</li>
+                <li>Creature illustration (head only) starts from IDR 75,000</li>
+                <li>Half-body illustration starts from IDR 125,000</li>
+                <li>Full-body illustration starts from IDR 250,000 (including a simple background)</li>
+            </ul>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 1rem;">
+                More detailed or customized backgrounds and complex scenes are available upon request. Feel free to contact me for specific needs or to discuss special project ideas.
+            </p>
+        </div>
+
+        <!-- Photography/Videography -->
+        <div style="margin-top: 2rem; animation: fadeIn 2.5s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">Photography/Videography</h3>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                <img src="https://i.imgur.com/YHjxmzd.jpeg" alt="Photography Example 1" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://i.imgur.com/QOTmHlo.jpeg" alt="Photography Example 2" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+                <img src="https://i.imgur.com/vONz111.jpeg" alt="Photography Example 3" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+            </div>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 1rem;">
+                I offer photography and videography services for various needs, such as promotional content and event documentation. Pricing starts from IDR 150,000 per session, depending on factors such as project type, session duration, and travel distance to the location. Rates are flexible and can be adjusted based on the specific requirements of each project.
+                If you're interested, feel free to contact me directly.
+            </p>
+        </div>
+
+        <!-- How to Buy -->
+        <div style="margin-top: 2rem; animation: fadeIn 3s ease-in-out;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333;">How to Buy</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">
+                If you'd like to book a service, feel free to reach out through the contact information below:
+            </p>
+            <ul style="list-style-type: none; padding-left: 0; font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">
+                <li>Email: <a href="mailto:avicennabil@gmail.com" style="color: #333; text-decoration: none;">avicennabil@gmail.com</a></li>
+                <li>Instagram: <a href="https://instagram.com/nabielavicenna_" target="_blank" style="color: #333; text-decoration: none;">@nabielavicenna_</a></li>
+                <li>WhatsApp: <a href="https://wa.me/088227717595" target="_blank" style="color: #333; text-decoration: none;">088227717595</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="about">
+        <h2 style="font-family: 'Poppins', sans-serif; text-align: center; font-size: 2.5rem; color: #333; animation: fadeIn 1s ease-in-out;">About Me</h2>
+        <div style="text-align: center; margin-bottom: 2rem; animation: fadeIn 1.5s ease-in-out;">
+            <img src="https://i.imgur.com/HoDwvom.jpeg" alt="Profile Picture" style="border-radius: 50%; width: 150px; height: 150px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+        <p style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: bold; color: #444; animation: fadeIn 2s ease-in-out;">Hi, I'm Nabiel!</p>
+        <p style="text-align: center; font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #666; animation: fadeIn 2.5s ease-in-out;">
+            A dedicated and passionate designer from Universitas Negeri Semarang (UNNES) with a strong background in creative design, multimedia, and problem-solving. I strive to deliver impactful and innovative solutions in every project I undertake.
+        </p>
+        <div style="margin-top: 2rem; animation: fadeIn 3s ease-in-out; display: flex; align-items: center;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; margin-right: 1rem;">Identity</h3>
+            <img src="https://i.imgur.com/S4oPUKD.png" alt="Identity Icon" style="width: 50px; height: 50px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 0.5rem;">
+            <strong>Name:</strong> Muhammad Nabiel Avicenna<br>
+            <strong>Date of Birth:</strong> January 20, 2004<br>
+            <strong>Hometown:</strong> Yogyakarta
+        </p>
+        <div style="margin-top: 2rem; animation: fadeIn 3.5s ease-in-out; display: flex; align-items: center;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; margin-right: 1rem;">Education</h3>
+            <img src="https://i.imgur.com/POULKy0.png" alt="Education Icon" style="width: 50px; height: 50px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 0.5rem;">
+            I am currently studying Visual Communication Design (DKV) at Universitas Negeri Semarang (UNNES), with a focus on graphic design, illustration, and multimedia content creation. My education combines creative thinking with practical skills, allowing me to communicate ideas effectively through visual media.
+
+            In graphic design, I work with typography, layout, and branding to create clear and engaging designs. My illustration skills help me visualize stories and concepts, often blending traditional and digital techniques. I also explore multimedia content, including animation and interactive media, to produce dynamic and immersive visual experiences.
+            
+            Through various academic and creative projects, I continue to sharpen my design abilities and aim to create meaningful visual content that connects with people and solves real-world problems.
+        </p>
+        <div style="margin-top: 2rem; animation: fadeIn 4s ease-in-out; display: flex; align-items: center;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; margin-right: 1rem;">Experience</h3>
+            <img src="https://i.imgur.com/9nJs5Hh.png" alt="Experience Icon" style="width: 50px; height: 50px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+        <ul style="list-style-type: none; padding-left: 0; font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">
+            <li style="margin-bottom: 1.5rem;">
+                <strong>Staff of Media Division – Ministry of Religion and Belief, BEM KM UNNES (2024)</strong>
+                <p style="margin-top: 0.5rem;">
+                    As part of the student government at Universitas Negeri Semarang, I am responsible for managing various media-related tasks, including:
+                </p>
+                <ul style="list-style-type: square; padding-left: 1.5rem;">
+                    <li>Designing posters and digital promotional materials</li>
+                    <li>Creating and scheduling social media content</li>
+                    <li>Supporting visual branding for events and campaigns</li>
+                    <li>Collaborating with team members to maintain a consistent and engaging online presence</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Freelance Graphic Designer & Illustrator (Ongoing)</strong>
+                <p style="margin-top: 0.5rem;">
+                    I have completed several freelance projects involving:
+                </p>
+                <ul style="list-style-type: square; padding-left: 1.5rem;">
+                    <li>Custom illustrations for personal and commercial use</li>
+                    <li>Logo and branding design</li>
+                    <li>Social media content design for small businesses</li>
+                    <li>Collaborating with clients to deliver visual solutions tailored to their needs</li>
+                </ul>
+                <p style="margin-top: 0.5rem;">
+                    These experiences have strengthened my ability to work creatively under deadlines, communicate ideas visually, and adapt to different styles and client expectations.
+                </p>
+            </li>
+        </ul>
+        <div style="margin-top: 2rem; animation: fadeIn 4.5s ease-in-out; display: flex; align-items: center;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; margin-right: 1rem;">Skills</h3>
+            <img src="https://i.imgur.com/UlmKuuU.png" alt="Skills Icon" style="width: 50px; height: 50px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+        <ul style="list-style-type: square; padding-left: 1.5rem; font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">
+            <li>Graphic Design (Adobe Photoshop, Illustrator)</li>
+            <li>Photography (Portrait, Product, Nature)</li>
+            <li>Videography (Editing, Storyboarding)</li>
+            <li>Illustration (Clip Studio Paint, Ibis paint)</li>
+        </ul>
+        <div style="margin-top: 2rem; animation: fadeIn 5s ease-in-out; display: flex; align-items: center;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.8rem; color: #333; margin-right: 1rem;">Contact</h3>
+            <img src="https://i.imgur.com/84sygY5.png" alt="Contact Icon" style="width: 50px; height: 50px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);">
+        </div>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555; margin-top: 0.5rem;">Feel free to reach out to me via:</p>
+        <ul style="list-style-type: none; padding-left: 0; font-family: 'Poppins', sans-serif; font-size: 1.2rem; color: #555;">
+            <li>Email: <a href="mailto:avicennabil@gmail.com" style="color: #333; text-decoration: none;">avicennabil@gmail.com</a></li>
+            <li>Instagram: <a href="https://instagram.com/nabielavicenna_" target="_blank" style="color: #333; text-decoration: none;">@nabielavicenna_</a></li>
+            <li>WhatsApp: <a href="https://wa.me/088227717595" target="_blank" style="color: #333; text-decoration: none;">088227717595</a></li>
+        </ul>
+    </section>
+    <footer style="background-color: #333; color: #fff; padding: 2rem; text-align: center; width: 100%; box-sizing: border-box;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h3 style="font-family: 'Poppins', sans-serif; font-size: 1.5rem; margin-bottom: 1rem;">About Me</h3>
+            <p style="font-family: 'Poppins', sans-serif; font-size: 0.8rem; margin-top: 0.5rem;">
+                Learn more about who I am behind the work — a student of Visual Communication Design at Universitas Negeri Semarang who’s passionate about creating impactful visuals. From campus organizations to freelance projects, my journey continues to shape the way I think, create, and collaborate.
+                Discover my story, experiences, and skills in the About Me page.
+            </p>
+
+            <!-- Contact Section -->
+            <div style="margin-top: 2rem;">
+                <a href="https://instagram.com/nabielavicenna_" target="_blank" style="margin-right: 1rem; display: inline-block;">
+                    <img src="https://i.imgur.com/jtHxjVI.png" alt="Instagram" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+                </a>
+                <a href="mailto:avicennabil@gmail.com" style="margin-right: 1rem; display: inline-block;">
+                    <img src="https://i.imgur.com/aFOl8qK.png" alt="Email" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+                </a>
+                <a href="https://wa.me/088227717595" target="_blank" style="display: inline-block;">
+                    <img src="https://i.imgur.com/tnGqXVW.png" alt="WhatsApp" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
